@@ -2,5 +2,5 @@
 package com.cleverbuilder
 
 class SonarVars {
-   static String foo = 'sonar-scanner'
+   static String scanner = 'sonar-scanner'
 }

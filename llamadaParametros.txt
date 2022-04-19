@@ -1,3 +1,6 @@
 "${credentials*2}" = para hacer operaciones dentro
 "hola $credentials" = esto imprime hola mas el valor del prametro
 'hola ' + credientials
+
+""" war-deployer 
+hola""" el string asi permite hacer saltos de linea

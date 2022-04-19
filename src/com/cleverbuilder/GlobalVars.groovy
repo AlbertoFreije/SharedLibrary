@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 package com.cleverbuilder
 
-class SonarVars {
-   static String foo = 'sonar-scanner'
+class GlobalVars {
+   static String foo = 'Maven 3.3.9'
+   static String foo2 = 'jdk8'
 }

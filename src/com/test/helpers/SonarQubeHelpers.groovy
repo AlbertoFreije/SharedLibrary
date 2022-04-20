@@ -2,7 +2,7 @@
 package com.test.helpers
 
 class SonarQubeHelpers {
-   static String foo = 'sonar-scanner'
-   static int time = 10
-   static int unit = 'MINUTES'
+   public final static String foo = 'sonar-scanner'
+   public final static int time = 10
+   public final static int unit = 'MINUTES'
 }

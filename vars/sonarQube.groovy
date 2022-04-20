@@ -4,6 +4,7 @@ import com.test.helpers.SonarQubeHelpers
 
 def call() {
     
+   println(" probando " + SonarQubeHelpers.foo)
    scannerHome = tool SonarQubeHelpers.foo
    //scannerHome = tool 'sonar-scanner'
    withSonarQubeEnv('sonarqube') {

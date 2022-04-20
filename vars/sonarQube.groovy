@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 
 import com.test.SonarVars
-import com.test.utils.Constant
+import com.test.helpers.Constant
 
 def call() {
     

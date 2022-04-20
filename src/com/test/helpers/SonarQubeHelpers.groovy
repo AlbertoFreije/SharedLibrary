@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-package com.test
+package com.test.helpers
 
 class SonarQubeHelpers {
    static String foo = 'sonar-scanner'

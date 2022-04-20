@@ -1,6 +1,6 @@
 #!/usr/bin/env groovy
 
-import com.test.helpers.SonarQubeHelpers
+import com.test.SonarQubeHelpers
 
 def call() {
     

@@ -1,11 +1,11 @@
 #!/usr/bin/env groovy
 
-import com.test.helpers.SonarQubeHelpers
+import com.test.SonarVars
 
 def call() {
     
-   println(" probando " + SonarQubeHelpers.foo)
-   scannerHome = tool SonarQubeHelpers.foo
+   println(" probando " + SonarVars.foo)
+   scannerHome = tool SonarVars.foo
    //scannerHome = tool 'sonar-scanner'
    withSonarQubeEnv('sonarqube') {
                                  sh "${scannerHome}/bin/sonar-scanner \

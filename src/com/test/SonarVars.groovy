@@ -1,7 +1,7 @@
 #!/usr/bin/env groovy
 package com.test
 
-class SonarVars {
-   static String foo = 'sonar-scanner'
-   static int time = 10
+public class SonarVars {
+   public static final String foo = 'sonar-scanner'
+   public static final int time = 10
 }

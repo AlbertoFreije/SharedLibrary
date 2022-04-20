@@ -1,5 +1,5 @@
 #!/usr/bin/env groovy
-package com.cleverbuilder
+package com.test
 
 class SonarVars {
    static String foo = 'sonar-scanner'

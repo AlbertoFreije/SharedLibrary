@@ -1,6 +1,7 @@
 #!/usr/bin/env groovy
 
 def call() {
+    
    withSonarQubeEnv('sonarqube') {
                                  sh "${scannerHome}/bin/sonar-scanner \
                                   -Dsonar.projectKey=gs-maven \

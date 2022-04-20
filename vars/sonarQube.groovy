@@ -29,13 +29,12 @@ def call() {
    */
    timeout(time: 10, unit: 'MINUTES') {
                         
-                                sh 'sleep 10'
-                                def qg = waitForQualityGate();
-                                if (qg.status != 'OK') {
-                                    error "Pipeline aborted due to quality gate failure: ${qg.status}"
-                                }
-                                
-                        
-                        
+            sh 'sleep 10'
+            def qg = waitForQualityGate();
+            if (qg.status != 'OK') {
+                    error "Pipeline aborted due to quality gate failure: ${qg.status}"
+                    println("ERROR AMIGO MIO");
+            }
+                  
    }
 }

@@ -1,10 +1,11 @@
 #!/usr/bin/env groovy
 
 import com.test.SonarVars
+import com.test.utils.Constant
 
 def call() {
     
-   println(" probando " + SonarVars.foo)
+   println(" probando " + Constant.prueba)
    scannerHome = tool SonarVars.foo
    //scannerHome = tool 'sonar-scanner'
    withSonarQubeEnv('sonarqube') {

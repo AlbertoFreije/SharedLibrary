@@ -7,7 +7,7 @@ def call() {
     
    println(" probando " + Constant.prueba)
    println(" probando " + Constant.foo)
-   scannerHome = tool SonarVars.foo
+   scannerHome = tool Constant.foo
    //scannerHome = tool 'sonar-scanner'
    withSonarQubeEnv('sonarqube') {
                                  sh "${scannerHome}/bin/sonar-scanner \

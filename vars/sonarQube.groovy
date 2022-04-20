@@ -6,6 +6,7 @@ import com.test.helpers.Constant
 def call() {
     
    println(" probando " + Constant.prueba)
+   println(" probando " + Constant.foo)
    scannerHome = tool SonarVars.foo
    //scannerHome = tool 'sonar-scanner'
    withSonarQubeEnv('sonarqube') {

@@ -19,15 +19,23 @@ def call() {
                                   -Dsonar.coverage.jacoco.xmlReportPaths=/var/jenkins_home/workspace/CoverageProject/target/site/jacoco/jacoco.xml \
                                   -Dsonar.java.coveragePlugin=jacoco"
    }
+
+   /*
+
+         * De vez en cuando...el análisis se demora y en ese caso se produce un error HTTP 401 (Authorization) al intentar obtener el estado del análisis mientras se está
+
+         * ejecutando. Para evitar esto se introduce un tiempo de espera.
+
+   */
    timeout(time: 10, unit: 'MINUTES') {
-                        script{
+                        
                                 sh 'sleep 10'
                                 def qg = waitForQualityGate();
                                 if (qg.status != 'OK') {
                                     error "Pipeline aborted due to quality gate failure: ${qg.status}"
                                 }
                                 
-                        }
+                        
                         
    }
 }

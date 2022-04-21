@@ -12,5 +12,5 @@ def call(String credentials = 'war-deployer', String context = 'calculadora') {
    println("Version " + config.version)
 
 
-   deploy adapters: [tomcat9(credentialsId: "${credentials}", path: '', url: 'http://192.168.56.10:8080')], contextPath: "${context}", war: '**/*.war'
+   deploy adapters: [tomcat9(credentialsId: "${credentials}", path: '', url: 'http://192.168.56.10:8080')], contextPath: "${config.artifactId}", war: '**/*.war'
 }

@@ -6,12 +6,11 @@ def call(String credentials = 'war-deployer', String context = 'calculadora') {
    config.groupId = readMavenPom().getGroupId()
    config.artifactId = readMavenPom().getArtifactId()
    config.version = readMavenPom().getVersion()
-   config.type = readMavenPom().getType()
 
    println("El GroupId es " + config.groupId)
    println("El artifactId es " + config.artifactId)
    println("Version " + config.version)
-   println("Tipo " + config.type)
+
 
    deploy adapters: [tomcat9(credentialsId: "${credentials}", path: '', url: 'http://192.168.56.10:8080')], contextPath: "${context}", war: '**/*.war'
 }

@@ -5,9 +5,7 @@ import com.test.helpers.Constant
 
 def call() {
     
-   println(" probando " + Constant.prueba)
-   println(" probando " + Constant.foo)
-   scannerHome = tool Constant.foo
+   scannerHome = tool Constant.scanner
    //scannerHome = tool 'sonar-scanner'
    withSonarQubeEnv('sonarqube') {
                                  sh "${scannerHome}/bin/sonar-scanner \
@@ -30,7 +28,7 @@ def call() {
          * ejecutando. Para evitar esto se introduce un tiempo de espera.
 
    */
-   timeout(time: 10, unit: 'MINUTES') {
+   timeout(time: Constant.time, unit: Constant.unit) {
                         
             sh 'sleep 10'
             def qg = waitForQualityGate();

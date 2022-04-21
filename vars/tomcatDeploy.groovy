@@ -4,7 +4,7 @@ def call(String credentials = 'war-deployer', String context = 'calculadora') {
 
    def config = [:]
    config.groupId = readMavenPom().getGroupId()
-   config.artifactId = readMavenPom().artifactId()
+   config.artifactId = readMavenPom().getArtifactId()
 
    println("El GroupId es " + config.groupId)
    println("El artifactId es " + config.artifactId)

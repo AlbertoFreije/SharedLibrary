@@ -11,6 +11,7 @@ def call(String credentials = 'war-deployer', String context = 'calculadora') {
    println("El artifactId es " + config.artifactId)
    println("Version " + config.version)
 
+   sh "mvn dependency:get -DremoteRepositories=http://192.168.56.10:8881/repository/maven-releases/ -DgroupId=org.springframework -DartifactId=calculadora -Dversion=0.1.0 -Dtransitive=false"
 
    deploy adapters: [tomcat9(credentialsId: "${credentials}", path: '', url: 'http://192.168.56.10:8080')], contextPath: "${config.artifactId}", war: '**/*.war'
 }
